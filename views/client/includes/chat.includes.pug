@@ -1,0 +1,18 @@
+chatContent
+    head 
+            link(rel="stylesheet", href="/css/styleChat.css")
+    body
+        div(class="chat__wrap")
+            each chat in content
+                if(User._id == chat.user_id)
+                    div(class="me_wrap") 
+                        div(class="me" chatContent)
+                            span #{chat.content}
+                else
+                    div(class="you_wrap")
+                        a #{chat.User.Name} 
+                        div(class="you" chatContent)
+                            span #{chat.content}
+                
+            
+        
